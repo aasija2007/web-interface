@@ -1,0 +1,93 @@
+[
+  {
+    "userId": "usr-admin-01",
+    "username": "admin",
+    "phone": "+919876548210",
+    "password": "password123",
+    "name": "Dr. Rajesh Sharma",
+    "role": "govt_admin",
+    "roleTitle": "Government Admin",
+    "assignedTempleId": "all",
+    "assignedEventId": "evt-2026-01",
+    "assignedArea": "All Temple Precincts",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-ops-02",
+    "username": "ops_officer",
+    "phone": "+919876548211",
+    "password": "password123",
+    "name": "Aasija Kumar",
+    "role": "ops_officer",
+    "roleTitle": "Operations Officer",
+    "assignedTempleId": "kashi-vishwanath",
+    "assignedEventId": "evt-2026-01",
+    "assignedArea": "Kashi Vishwanath Corridor",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-emer-03",
+    "username": "emergency_officer",
+    "phone": "+919876548212",
+    "password": "password123",
+    "name": "Dr. Meena Swaminathan",
+    "role": "emergency_officer",
+    "roleTitle": "Emergency Officer",
+    "assignedTempleId": "kashi-vishwanath",
+    "assignedEventId": "evt-2026-01",
+    "assignedArea": "Emergency HQ & Medical Posts",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-agency-04",
+    "username": "agency_contractor",
+    "phone": "+919876548213",
+    "password": "password123",
+    "name": "Vikram Malhotra",
+    "role": "agency_contractor",
+    "roleTitle": "Agency / Contractor",
+    "assignedTempleId": "tirumala-tirupati",
+    "assignedEventId": "evt-2026-02",
+    "assignedArea": "Apex Infrastructure & Shuttles",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-field-05",
+    "username": "field_staff",
+    "phone": "+919876548214",
+    "password": "password123",
+    "name": "Sanjay Verma",
+    "role": "field_staff",
+    "roleTitle": "Field Staff",
+    "assignedTempleId": "kashi-vishwanath",
+    "assignedEventId": "evt-2026-01",
+    "assignedArea": "Zone B — Temple Approach Route",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-coord-06",
+    "username": "event_coordinator",
+    "phone": "+919876548215",
+    "password": "password123",
+    "name": "Pooja Hegde",
+    "role": "event_coordinator",
+    "roleTitle": "Event Coordinator",
+    "assignedTempleId": "kedarnath-dham",
+    "assignedEventId": "evt-2026-03",
+    "assignedArea": "Kedarnath Pilgrimage Festival",
+    "status": "ACTIVE"
+  },
+  {
+    "userId": "usr-audit-07",
+    "username": "viewer_auditor",
+    "phone": "+919876548216",
+    "password": "password123",
+    "name": "Ramesh Narayan",
+    "role": "viewer_auditor",
+    "roleTitle": "Viewer / Auditor",
+    "assignedTempleId": "all",
+    "assignedEventId": "evt-2026-01",
+    "assignedArea": "System Audit & Analytics",
+    "status": "ACTIVE"
+  }
+]

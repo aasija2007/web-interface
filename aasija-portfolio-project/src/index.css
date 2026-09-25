@@ -1,0 +1,323 @@
+/* ==========================================================================
+   AASIJA K - PERSONAL PORTFOLIO DESIGN SYSTEM & GLOBAL STYLES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. COLOR PALETTE & THEME VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Pastel Light Theme (Default) */
+  --bg-gradient-start: #f5f3ff;
+  --bg-gradient-via: #eff6ff;
+  --bg-gradient-end: #fdf2f8;
+  
+  --bg-color: #f8fafc;
+  --bg-card: rgba(255, 255, 255, 0.65);
+  --bg-card-hover: rgba(255, 255, 255, 0.85);
+  --bg-nav: rgba(255, 255, 255, 0.75);
+  
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  
+  --primary: #7c3aed;
+  --primary-gradient: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+  --primary-light: #ddd6fe;
+  
+  --accent-pink: #f472b6;
+  --accent-purple: #a78bfa;
+  --accent-blue: #38bdf8;
+  
+  --border-color: rgba(124, 58, 237, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.15);
+  
+  --glow-color: rgba(167, 139, 250, 0.35);
+  --particle-color: rgba(124, 58, 237, 0.4);
+}
+
+[data-theme="dark"] {
+  /* Dark Mode Palette with Neon Accents */
+  --bg-gradient-start: #090d16;
+  --bg-gradient-via: #0f172a;
+  --bg-gradient-end: #170d24;
+  
+  --bg-color: #0b0f19;
+  --bg-card: rgba(30, 41, 59, 0.6);
+  --bg-card-hover: rgba(30, 41, 59, 0.85);
+  --bg-nav: rgba(15, 23, 42, 0.8);
+  
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --text-light: #64748b;
+  
+  --primary: #a78bfa;
+  --primary-gradient: linear-gradient(135deg, #a78bfa 0%, #f472b6 100%);
+  --primary-light: #2e1065;
+  
+  --accent-pink: #f472b6;
+  --accent-purple: #c084fc;
+  --accent-blue: #38bdf8;
+  
+  --border-color: rgba(167, 139, 250, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  
+  --glow-color: rgba(192, 132, 252, 0.25);
+  --particle-color: rgba(192, 132, 252, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-via), var(--bg-gradient-end));
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   3. CUSTOM SCROLLBAR & SELECTION
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), var(--accent-pink));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   4. GLASSMORPHISM & UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary);
+  box-shadow: 0 16px 40px -10px var(--glow-color);
+}
+
+.gradient-text {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--primary-gradient);
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 25px -5px var(--glow-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -5px var(--glow-color);
+  filter: brightness(1.08);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   5. MOUSE CURSOR GLOW EFFECT
+   -------------------------------------------------------------------------- */
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--glow-color) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.15s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   6. KEYFRAME ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.05); }
+}
+
+@keyframes typingBlink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: var(--primary); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Scroll reveal helper class */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .section-container {
+    padding: 80px 20px;
+  }
+  .section-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    padding: 60px 16px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .cursor-glow {
+    display: none; /* Disable glow on mobile touch devices */
+  }
+}

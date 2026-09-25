@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* BOTANICAL EMERALD GREEN THEME PALETTES */
+:root {
+  /* Dark Forest Emerald Theme (Default) */
+  --bg-cartographer: #031F17;
+  --panel-cartographer: #063327;
+  --card-bg: #0A4234;
+  --border-cartographer: #105E4C;
+  --ink-blue: #34D399;
+  --ink-blue-bg: rgba(52, 211, 153, 0.15);
+  --sage-green: #2DD4BF;
+  --sage-green-bg: rgba(45, 212, 191, 0.15);
+  --wax-red: #F59E0B;
+  --wax-red-hover: #D97706;
+  --text-dark: #F0FDF4;
+  --text-dim: #99F6E4;
+  --select-option-bg: #063327;
+  --shadow-color: rgba(3, 31, 23, 0.6);
+}
+
+body.light-theme {
+  /* Light Botanical Mint & Emerald Theme */
+  --bg-cartographer: #E8F5E9;
+  --panel-cartographer: #F4FBF7;
+  --card-bg: #FFFFFF;
+  --border-cartographer: #A3D9C9;
+  --ink-blue: #047857;
+  --ink-blue-bg: rgba(4, 120, 87, 0.12);
+  --sage-green: #0D9488;
+  --sage-green-bg: rgba(13, 148, 136, 0.15);
+  --wax-red: #D97706;
+  --wax-red-hover: #B45309;
+  --text-dark: #062C22;
+  --text-dim: #47665E;
+  --select-option-bg: #F4FBF7;
+  --shadow-color: rgba(4, 120, 87, 0.12);
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-cartographer);
+  color: var(--text-dark);
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body.light-theme {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(163, 217, 201, 0.4) 0%, transparent 75%),
+    radial-gradient(circle at 100% 100%, rgba(13, 148, 136, 0.15) 0%, transparent 50%);
+}
+
+body:not(.light-theme) {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(52, 211, 153, 0.18) 0%, transparent 75%),
+    radial-gradient(circle at 100% 100%, rgba(45, 212, 191, 0.12) 0%, transparent 50%);
+}
+
+/* Custom Scrollbars in Emerald Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-cartographer);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-cartographer);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ink-blue);
+}
+
+/* Typography Utility */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Emerald Panel Utility Classes */
+.glass-panel {
+  background: var(--panel-cartographer);
+  border: 1.5px solid var(--border-cartographer);
+  box-shadow: 0 15px 35px var(--shadow-color);
+  border-radius: 1.25rem;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border-cartographer);
+  border-radius: 1rem;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--ink-blue);
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+/* Select Styling Fixes */
+select option {
+  background-color: var(--select-option-bg);
+  color: var(--text-dark);
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Amber Gold Action Button Style */
+.btn-wax-red {
+  background-color: var(--wax-red);
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(217, 119, 6, 0.35);
+  transition: all 0.2s ease;
+}
+.btn-wax-red:hover {
+  background-color: var(--wax-red-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.45);
+}
+
+/* Animations */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px) scale(0.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom Scrollbar Hide Utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
