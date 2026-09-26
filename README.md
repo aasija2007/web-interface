@@ -10,7 +10,8 @@ link:https://6ab626b3252bef5d6c3b2035--inspiring-lamington-308f6f.netlify.app/
 
 project 4-wardern security app (landing page)
 link:https://6ab625f61ed841b0b45a99a1--jocular-figolla-a46adc.netlify.app/
-<img width="1535" height="722" alt="image" src="https://github.com/user-attachments/assets/bab75657-5a5a-444e-b3b1-13c3afb3dd2f" />
+<img width="1497" height="712" alt="image" src="https://github.com/user-attachments/assets/066d22cd-2a4b-4998-963d-9f2c8e10c6a6" />
+
 
 
 project 5 - quiz app
